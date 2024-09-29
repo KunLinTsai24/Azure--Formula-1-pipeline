@@ -52,7 +52,7 @@ Eight different data files (circuits, races, constructors, drivers, results, pit
 
 ### **Solution Architecture**
 
-**\[img\]**
+![](https://github.com/KunLinTsai24/Formula-1-pipeline/blob/main/img/Databricks%20Solution%20Architecture.png)
 
 - **External vs. Managed Tables:**
   - **External Tables:** Bronze layer tables were set as external to retain the data even if the table is dropped.
@@ -67,7 +67,7 @@ Create External Table: The raw data was ingested by creating an external table t
 
 ### **Ingestion**
 
-**\[img\]**
+![](https://github.com/KunLinTsai24/Formula-1-pipeline/blob/main/img/Ingestion.png)
 
 - **Reading Data:** All raw data files were read into a DataFrame using **spark.read()**.
 - **Data Preparation Steps:**
@@ -128,7 +128,7 @@ Create External Table: The raw data was ingested by creating an external table t
   - The pipeline was scheduled to run automatically using a tumbling window trigger, which executes the pipeline at a fixed interval.
   - **Schedule Frequency:** The pipeline is configured to run every week, specifically on Sunday at 10 PM.
 
-**\[img\]**
+![](https://github.com/KunLinTsai24/Formula-1-pipeline/blob/main/img/databrick%20pipeline.png)
 
 ---
 
